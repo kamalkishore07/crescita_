@@ -1,0 +1,316 @@
+{
+    "navbar": {
+        "logo": "Crescita",
+        "links": [
+            {
+                "label": "Flow",
+                "href": "#flow"
+            },
+            {
+                "label": "Prizes",
+                "href": "#prizes"
+            },
+            {
+                "label": "Sponsors",
+                "href": "#sponsors"
+            },
+            {
+                "label": "Venue",
+                "href": "#venue"
+            }
+        ],
+        "cta": "Register Now"
+    },
+    "hero": {
+        "title": "Where Ideas Grow Into Impact.",
+        "description": "24 Hours of Innovation · Code · Creativity. Join us for the ultimate college hackathon experience.",
+        "cta": "Register Now"
+    },
+    "techEvents": {
+        "title": "Experience Innovation",
+        "description": "Explore a variety of events designed to challenge and inspire.",
+        "items": [
+            {
+                "title": "Tech Events",
+                "description": "Engage in competitive coding, debugging, and tech quizzes to test your skills.",
+                "icon": "MdCode",
+                "modalDetails": [
+                    {
+                        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+                        "title": "Speaksphere",
+                        "description": "A platform to voice your ideas and debate on trending tech topics."
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1516259762381-229ca2d160bd?q=80&w=2069&auto=format&fit=crop",
+                        "title": "Pitch to Prove It",
+                        "description": "Showcase your innovative ideas and convince the judges in this pitching battle."
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1504384308090-c54be3855833?q=80&w=2062&auto=format&fit=crop",
+                        "title": "Bid 2 Build",
+                        "description": "Strategize, bid for resources, and build the ultimate solution with what you have."
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=2070&auto=format&fit=crop",
+                        "title": "Vibexecute",
+                        "description": "Feel the vibe and execute tasks in this rhythmic and fast-paced challenge."
+                    }
+                ]
+            },
+            {
+                "title": "Hackathon",
+                "description": "A 24-hour sprint to build innovative solutions for real-world problems.",
+                "icon": "MdTimer",
+                "modalDetails": [
+                    {
+                        "image": "https://images.unsplash.com/photo-1504384308090-c54be3855833?q=80&w=2062&auto=format&fit=crop",
+                        "title": "24H Hackathon",
+                        "description": "Join us for an electrifying 24-hour hackathon where your coding skills will be put to the ultimate test. Build, innovate, and disrupt mechanisms to solve real-world challenges. With mentorship from industry experts and a pool of talented peers, this is your chance to turn your ideas into reality."
+                    }
+                ]
+            },
+            {
+                "title": "Workshops",
+                "description": "Hands-on sessions on AI, Blockchain, and more by industry experts.",
+                "icon": "MdSchool",
+                "modalDetails": [
+                    {
+                        "image": "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop",
+                        "title": "March 6th Workshop",
+                        "description": "Join us on March 6th for an immersive deep-dive session. Topic and details coming soon."
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
+                        "title": "March 7th Workshop",
+                        "description": "Day 2 of learning! Join us on March 7th for advanced concepts and hands-on practice."
+                    }
+                ]
+            }
+        ]
+    },
+    "stats": {
+        "logos": [
+            "https://renaissance-2k25.netlify.app/assets/kec-Bk1A3mt5.png",
+            "https://renaissance-2k25.netlify.app/assets/csea-B29j3Ac0.png",
+            "https://renaissance-2k25.netlify.app/assets/ccclogo-DNGmJy1i.png"
+        ],
+        "items": [
+            {
+                "name": "KEC",
+                "paragraph": "Kongu Engineering College, affiliated to Anna University, is located in Perundurai, Erode. It is accredited with an 'A' grade by National Assessment Accreditation Council. Over the past 40 years, the instituton with its good infrastructure facility and excellent academic records has emerged as a center of excellence.The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future."
+            },
+            {
+                "name": "CSEA",
+                "paragraph": "The Computer Science and Engineering Association (CSEA) is a vibrant student-driven body that forms the backbone of academic, technical, and cultural activities in the CSE department. It serves as a dynamic forum where students come together to explore, learn, and innovate beyond the classroom. By organizing guest lectures, technical talks, workshops, hackathons, symposium, and cultural events, CSEA provides ample opportunities to sharpen technical knowledge, foster leadership, and nurture creativity. Acting as a bridge between industry, and students, the association keeps members connected with emerging technologies while encouraging collaboration, problem-solving, and holistic growth. With its diverse initiatives, CSEA not only cultivates professional excellence but also builds a strong sense of community, preparing students to meet industry expectations and contribute meaningfully to society."
+            },
+            {
+                "name": "CCC",
+                "paragraph": "The CSE Coding Club is a vibrant community of coding enthusiasts in the Computer Science and Engineering department. By organizing coding events, hackathons, workshops, and mock drives, the club empowers students to sharpen their coding skills, think creatively, and tackle real-world problems. These activities foster a spirit of innovation, teamwork, and healthy competition among members. The CSE Coding Club is an ideal platform for students to learn from peers, get hands-on experience with cutting-edge technologies, and build a strong portfolio of coding projects."
+            }
+        ]
+    },
+    "eventFlow": {
+        "title": "At Crescita, We Believe Hackathons Should Be More Than",
+        "highlight": "Just A Code-A-Thon.",
+        "centerNode": {
+            "number": "24",
+            "label": "HOURS"
+        },
+        "productivityTitle": "The Hackathon Journey",
+        "tags": [
+            "Final Pitch",
+            "Mentoring",
+            "Development",
+            "Ideation",
+            "Team Formation",
+            "Registration"
+        ],
+        "sideLabels": [
+            "Unleash Creativity",
+            "Impactful Innovation"
+        ]
+    },
+    "prizes": {
+        "title": "Transparent Rewards For All Builders",
+        "tabs": [
+            "Main Prizes",
+            "Category Prizes"
+        ],
+        "cards": [
+            {
+                "type": "Runner Up",
+                "value": "₹25,000",
+                "unit": "/team",
+                "button": "View Details",
+                "includes": [
+                    "Cash Reward",
+                    "Participation Certificate",
+                    "Cloud Credits",
+                    "Internship Opportunities"
+                ]
+            },
+            {
+                "type": "Special Mention",
+                "value": "₹10,000",
+                "unit": "/team",
+                "button": "Explore Tracks",
+                "includes": [
+                    "Track Specific Reward",
+                    "Sponsor Goodies",
+                    "Voucher Kits",
+                    "Certificate of Merit"
+                ]
+            },
+            {
+                "type": "Winner",
+                "value": "₹50,000",
+                "unit": "/team",
+                "button": "Register Now",
+                "includes": [
+                    "Grand Cash Prize",
+                    "Premium Trophies",
+                    "Incubation Support",
+                    "Direct Interview Rounds"
+                ],
+                "variant": "dark"
+            }
+        ]
+    },
+    "sponsors": {
+        "title": "Powering Innovation With Industry Visionaries",
+        "partners": [
+            {
+                "name": "Tech Corp",
+                "description": "Global leaders in cloud computing and AI infrastructure.",
+                "tier": "Title Sponsor"
+            },
+            {
+                "name": "Innovate Systems",
+                "description": "Driving Digital Transformation for Fortune 500 companies.",
+                "tier": "Gold Sponsor"
+            },
+            {
+                "name": "Future Labs",
+                "description": "Accelerating breakthrough research in quantum computing.",
+                "tier": "Gold Sponsor"
+            },
+            {
+                "name": "Dev Studio",
+                "description": "The world's most popular IDE and developer ecosystem.",
+                "tier": "Silver Sponsor"
+            },
+            {
+                "name": "Cloud Native",
+                "description": "Standardizing the future of scalable application delivery.",
+                "tier": "Silver Sponsor"
+            },
+            {
+                "name": "Code Masters",
+                "description": "Educational platform for elite software engineering talent.",
+                "tier": "Bronze Sponsor"
+            }
+        ]
+    },
+    "organisers": {
+        "title": "Built By Builders For Builders",
+        "members": [
+            {
+                "name": "Prasanndh Raju M R",
+                "role": "Secretary (CSEA)",
+                "phone": "8946050246"
+            },
+            {
+                "name": "Divya K",
+                "role": "Secretary (CCC)",
+                "phone": "6374939491"
+            },
+            {
+                "name": "Samvardhini D",
+                "role": "Treasurer (CSEA)",
+                "phone": "9487183168"
+            },
+            {
+                "name": "Ragulandiran M",
+                "role": "Treasurer (CCC)",
+                "phone": "9629074704"
+            },
+            {
+                "name": "Kamal Kishore V",
+                "role": "Joint Secretary (CSEA)",
+                "phone": "7530086388"
+            },
+            {
+                "name": "Varshini S",
+                "role": "Joint Secretary (CCC)",
+                "phone": "9940849979"
+            }
+        ]
+    },
+    "schedule": {
+        "title": "Timeline of Innovation",
+        "days": [
+            {
+                "day": "Day 01",
+                "date": "Jan 25, 2026",
+                "events": [
+                    {
+                        "time": "09:00 AM",
+                        "event": "Check-in & Registration",
+                        "type": "Logistics"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "event": "Opening Ceremony",
+                        "type": "Ceremony"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "event": "Hacking Begins",
+                        "type": "Hacking"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "event": "Lunch Break",
+                        "type": "Food"
+                    },
+                    {
+                        "time": "08:00 PM",
+                        "event": "Dinner & Networking",
+                        "type": "Food"
+                    }
+                ]
+            },
+            {
+                "day": "Day 02",
+                "date": "Jan 26, 2026",
+                "events": [
+                    {
+                        "time": "08:00 AM",
+                        "event": "Breakfast",
+                        "type": "Food"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "event": "Tech Workshop: Gemini AI",
+                        "type": "Workshop"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "event": "Lunch",
+                        "type": "Food"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "event": "Mentorship Rounds",
+                        "type": "Hacking"
+                    },
+                    {
+                        "time": "09:00 PM",
+                        "event": "Midnight Fun Event",
+                        "type": "Social"
+                    }
+                ]
+            }
+        ]
+    }
+}
