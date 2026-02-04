@@ -1,70 +1,106 @@
 import React from 'react';
-import { MdVerified } from 'react-icons/md';
+import { MdVerified, MdPhone, MdEmail } from 'react-icons/md';
+import { FiUser } from 'react-icons/fi';
 import content from '../../data/content.json';
 
 export const Organisers: React.FC = () => {
     const { organisers } = content;
 
-    const images = [
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_aditya_sharma_1769250428511.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_priya_patel_1769250445599.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_rahul_verma_1769250461478.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_sneha_gupta_1769250475813.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_karthik_raja_1769250489564.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/organizer_deepa_nair_1_1769250507092.png"
-    ];
+    // Color palette for different roles
+    const getColorScheme = (index: number) => {
+        const colors = [
+            { bg: 'bg-orange/10', border: 'border-orange/20', text: 'text-orange', hover: 'hover:border-orange/40' },
+            { bg: 'bg-blue-500/10', border: 'border-blue-500/20', text: 'text-blue-400', hover: 'hover:border-blue-500/40' },
+            { bg: 'bg-purple-500/10', border: 'border-purple-500/20', text: 'text-purple-400', hover: 'hover:border-purple-500/40' },
+            { bg: 'bg-green-500/10', border: 'border-green-500/20', text: 'text-green-400', hover: 'hover:border-green-500/40' },
+            { bg: 'bg-pink-500/10', border: 'border-pink-500/20', text: 'text-pink-400', hover: 'hover:border-pink-500/40' },
+            { bg: 'bg-cyan-500/10', border: 'border-cyan-500/20', text: 'text-cyan-400', hover: 'hover:border-cyan-500/40' },
+        ];
+        return colors[index % colors.length];
+    };
 
     return (
         <section id="organisers" className="pt-32 pb-48 px-4 sm:px-8 md:px-16 bg-transparent">
             <div className="max-w-6xl mx-auto">
-                {/* Compact Header */}
+                {/* Header */}
                 <div className="flex flex-col items-center text-center space-y-3 mb-20">
                     <span className="text-orange font-bold text-[9px] tracking-[0.4em] uppercase reveal-text">The Visionaries</span>
                     <h2 className="text-white text-4xl md:text-6xl font-cabinet font-bold tracking-tight uppercase leading-[0.85] reveal-text">
-                        Built By <span className="text-orange">Builders</span> For <span className="text-orange">Builders</span>
+                        Meet The <span className="text-orange">Organizers</span>
                     </h2>
+                    <p className="text-white/50 text-sm max-w-2xl mt-4 reveal-text">
+                        Have questions? Reach out to our dedicated team of organizers
+                    </p>
                 </div>
 
-                {/* Modular Profile Grid - Compacted */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {organisers.members.map((member, i) => (
-                        <div
-                            key={i}
-                            className="bg-[#111] rounded-[2.8rem] overflow-hidden border border-white/5 p-3 shadow-lg shadow-black/20 transition-all duration-500 hover:shadow-xl hover:shadow-orange/5 hover:border-orange/20 group reveal"
-                        >
-                            <div className="gloss-sheen"></div>
-                            {/* Portrait Image Container - Compacted Height */}
-                            <div className="relative h-[260px] w-full overflow-hidden rounded-[2.2rem]">
-                                <img
-                                    src={images[i]}
-                                    alt={member.name}
-                                    className="w-full h-full object-cover grayscale-[0.3] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40"></div>
-                            </div>
+                {/* Organizers Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {organisers.members.map((member, i) => {
+                        const colorScheme = getColorScheme(i);
 
-                            {/* Card Content - Streamlined */}
-                            <div className="px-5 py-8 space-y-5 text-left">
-                                <div className="flex items-center gap-2">
-                                    <h3 className="text-xl font-bold tracking-tight text-white leading-tight">
-                                        {member.name}
-                                    </h3>
-                                    <MdVerified className="text-[#00BA34] text-2xl" />
+                        return (
+                            <div
+                                key={i}
+                                className={`relative bg-[#111] rounded-3xl border ${colorScheme.border} ${colorScheme.hover} p-8 transition-all duration-500 hover:scale-[1.02] group reveal overflow-hidden`}
+                            >
+                                <div className="gloss-sheen"></div>
+
+                                {/* Icon/Avatar */}
+                                <div className="relative z-10 mb-6">
+                                    <div className={`w-16 h-16 rounded-2xl ${colorScheme.bg} border ${colorScheme.border} flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
+                                        <FiUser className={`w-8 h-8 ${colorScheme.text}`} />
+                                    </div>
                                 </div>
 
-                                <p className="text-white/60 text-[14px] font-medium leading-relaxed line-clamp-2">
+                                {/* Name & Verification */}
+                                <div className="relative z-10 mb-2">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <h3 className="text-xl font-bold tracking-tight text-white leading-tight">
+                                            {member.name}
+                                        </h3>
+                                        <MdVerified className="text-[#00BA34] text-xl flex-shrink-0" />
+                                    </div>
+                                </div>
+
+                                {/* Role */}
+                                <p className={`relative z-10 text-sm font-semibold ${colorScheme.text} mb-6 uppercase tracking-wide`}>
                                     {member.role}
                                 </p>
 
-                                {/* Bottom Action - Modular & Compact */}
-                                <div className="pt-6 border-t border-white/5">
-                                    <button className="w-full bg-white/5 text-white text-[14px] font-bold py-4 rounded-full shadow-sm hover:bg-orange transition-all duration-300">
-                                        For Contact - {member.phone}
-                                    </button>
+                                {/* Contact Info */}
+                                <div className="relative z-10 space-y-3">
+                                    {/* Phone */}
+                                    <a
+                                        href={`tel:${member.phone}`}
+                                        className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/phone"
+                                    >
+                                        <div className={`w-10 h-10 rounded-xl ${colorScheme.bg} border ${colorScheme.border} flex items-center justify-center flex-shrink-0`}>
+                                            <MdPhone className={`w-5 h-5 ${colorScheme.text}`} />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-[10px] uppercase tracking-wider text-white/40 font-bold mb-0.5">Phone</p>
+                                            <p className="text-sm font-semibold text-white/90 group-hover/phone:text-white transition-colors">
+                                                {member.phone}
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
+
+                                {/* Decorative gradient */}
+                                <div className={`absolute -bottom-20 -right-20 w-40 h-40 ${colorScheme.bg} rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
+                </div>
+
+                {/* Bottom CTA */}
+                <div className="mt-16 text-center reveal-text">
+                    <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <p className="text-sm text-white/60">
+                            Available for queries during event hours
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

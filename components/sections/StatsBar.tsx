@@ -47,13 +47,13 @@ export const StatsBar: React.FC = () => {
                                     <img
                                         src={stats.logos[i]}
                                         alt={`${item.name} logo`}
-                                        className="h-32 w-auto relative z-10 opacity-100 transition-all duration-500 group-hover/logo:scale-110 brightness-0 invert"
+                                        className="h-32 w-auto relative z-10 opacity-100 transition-all duration-500 group-hover/logo:scale-110"
                                     />
                                 </div>
 
                                 {/* Card Container */}
                                 <div
-                                    className="bg-[#1A1A1A] p-10 md:p-12 rounded-[2.5rem] relative overflow-hidden flex flex-col justify-start min-h-[300px] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-orange/20"
+                                    className="group bg-[#1A1A1A] p-10 md:p-12 rounded-[2.5rem] relative overflow-hidden flex flex-col justify-start min-h-[300px] shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.03] border border-white/5 hover:border-orange/20"
                                 >
                                     <div className="gloss-sheen"></div>
                                     {/* Top Right Dot - Branded */}

@@ -27,14 +27,15 @@ export const Button: React.FC<ButtonProps> = ({
         lg: 'px-10 py-5 text-base'
     };
 
-    const shape = 'rounded-2xl';
+    const shape = 'rounded-2xl relative overflow-hidden group';
 
     return (
         <button
             className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${shape} ${className}`}
             {...props}
         >
-            {children}
+            <div className="gloss-sheen"></div>
+            <span className="relative z-10">{children}</span>
         </button>
     );
 };

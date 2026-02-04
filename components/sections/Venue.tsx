@@ -30,7 +30,7 @@ export const Venue: React.FC = () => {
                             <div className="w-12 h-1 bg-orange/20 rounded-full mt-6 reveal"></div>
                         </div>
 
-                        <div className="bg-[#111] border border-white/5 rounded-[3rem] p-10 shadow-2xl space-y-10 reveal relative overflow-hidden">
+                        <div className="group bg-[#111] border border-white/5 rounded-[3rem] p-10 shadow-2xl space-y-10 reveal relative overflow-hidden transition-all duration-500 hover:scale-[1.03]">
                             <div className="gloss-sheen"></div>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-2 text-orange font-bold text-[10px] tracking-widest uppercase">
@@ -48,7 +48,7 @@ export const Venue: React.FC = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold tracking-tight text-white">Jan 25 — 27, 2026</h3>
                                 <div className="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-widest">
-                                    <MdCheckCircle className="text-green-500" /> 34 Hours Continuous
+                                    <MdCheckCircle className="text-green-500" /> 30 Hours Continuous
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export const Venue: React.FC = () => {
                             {schedule.days[activeDay].events.map((item, i) => (
                                 <div
                                     key={i}
-                                    className="group relative bg-[#111] border border-white/5 rounded-3xl p-6 md:px-10 flex flex-col md:flex-row md:items-center gap-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 overflow-hidden"
+                                    className="group relative bg-[#111] border border-white/5 rounded-3xl p-6 md:px-10 flex flex-col md:flex-row md:items-center gap-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20 hover:scale-[1.02] overflow-hidden"
                                 >
                                     <div className="gloss-sheen"></div>
                                     {/* Time Block */}

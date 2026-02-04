@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
@@ -10,13 +10,15 @@ import { Hero } from '../components/sections/Hero';
 import { TechEvents } from '../components/sections/TechEvents';
 import { StatsBar } from '../components/sections/StatsBar';
 import { EventFlow } from '../components/sections/EventFlow';
-import { PrizePool } from '../components/sections/PrizePool';
 import { Sponsors } from '../components/sections/Sponsors';
 import { Organisers } from '../components/sections/Organisers';
 import { Venue } from '../components/sections/Venue';
 import { Footer } from '../components/sections/Footer';
+import { InstructionsPopup } from '../components/ui/InstructionsPopup';
 
 export default function Home() {
+  const [isInstructionsOpen, setIsInstructionsOpen] = useState(false);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -102,31 +104,6 @@ export default function Home() {
       );
     });
 
-    // Section Stacking Logic
-    const sections = gsap.utils.toArray('.stack-item') as HTMLElement[];
-    sections.forEach((section, i) => {
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top top',
-        pin: true,
-        pinSpacing: false,
-      });
-
-      // Scale down effect for previous sections
-      if (i < sections.length - 1) {
-        gsap.to(section, {
-          scale: 0.94,
-          opacity: 0.5,
-          scrollTrigger: {
-            trigger: sections[i + 1],
-            start: 'top bottom',
-            end: 'top top',
-            scrub: true,
-          },
-        });
-      }
-    });
-
     return () => {
       lenis.destroy();
     };
@@ -138,17 +115,21 @@ export default function Home() {
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
 
       <div className="relative z-10">
-        <Navbar />
-        <div className="stack-item"><Hero /></div>
-        <div className="stack-item bg-[#0A0A0A]"><TechEvents /></div>
-        <div className="stack-item bg-[#0A0A0A]"><StatsBar /></div>
-        <div className="stack-item bg-[#0A0A0A]"><EventFlow /></div>
-        <div className="stack-item bg-[#0A0A0A]"><PrizePool /></div>
-        <div className="stack-item bg-[#0A0A0A] relative z-20"><Sponsors /></div>
-        <div className="stack-item bg-[#0A0A0A] relative z-30"><Organisers /></div>
-        <div className="stack-item bg-[#0A0A0A] relative z-40"><Venue /></div>
-        <div className="stack-item bg-[#0A0A0A] relative z-50"><Footer /></div>
+        <Navbar onInstructionsClick={() => setIsInstructionsOpen(true)} />
+        <Hero />
+        <TechEvents />
+        <StatsBar />
+        <EventFlow />
+        <Sponsors />
+        <Organisers />
+        <Venue />
+        <Footer />
       </div>
+
+      <InstructionsPopup
+        isOpen={isInstructionsOpen}
+        onClose={() => setIsInstructionsOpen(false)}
+      />
     </div>
   );
 }

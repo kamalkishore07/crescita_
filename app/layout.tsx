@@ -22,10 +22,10 @@ const cabinetGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Crescita – 24 Hours College Hackathon",
-  description: "Where Ideas Grow Into Impact. Join the ultimate college hackathon experience.",
+  title: "Cresciton – 30 Hours Innovation Sprint",
+  description: "Where Ideas Grow Into Impact. Join the ultimate college Cresciton experience.",
   openGraph: {
-    title: "Crescita – 24 Hours College Hackathon",
+    title: "Cresciton – 30 Hours Innovation Sprint",
     description: "Where Ideas Grow Into Impact",
     type: "website",
   },

@@ -68,9 +68,8 @@ export const PrizePool: React.FC = () => {
                                         />
                                     </div>
                                 )}
-                                <div className={`w-full flex flex-col items-center justify-center rounded-[2.5rem] bg-[#111] border-2 transition-all duration-500 relative overflow-hidden
-                                    ${card.h} ${card.color} h-[250px]
-                                    ${!isFirst && 'hover:scale-[1.02]'}`}
+                                <div className={`w-full flex flex-col items-center justify-center rounded-[2.5rem] bg-[#111] border-2 transition-all duration-500 relative overflow-hidden group
+                                    ${card.h} ${card.color} h-[250px] hover:scale-[1.05]`}
                                 >
                                     <div className="gloss-sheen"></div>
                                     {/* Rank Indicator */}

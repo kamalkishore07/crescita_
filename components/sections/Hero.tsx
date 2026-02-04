@@ -5,6 +5,10 @@ import { Button } from '../ui/Button';
 import content from '../../data/content.json';
 
 export const Hero: React.FC = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [typingSpeed, setTypingSpeed] = useState(150);
     const { hero } = content;
     const containerRef = useRef<HTMLDivElement>(null);
     const [gridSize, setGridSize] = useState({ rows: 20, cols: 40 });
@@ -42,6 +46,30 @@ export const Hero: React.FC = () => {
         return () => cancelAnimationFrame(frame);
     }, [gridSize.cols]);
 
+    useEffect(() => {
+        const handleTyping = () => {
+            const fullText = (hero.titles as string[])[currentIndex];
+
+            if (isDeleting) {
+                setCurrentText(fullText.substring(0, currentText.length - 1));
+                setTypingSpeed(50);
+            } else {
+                setCurrentText(fullText.substring(0, currentText.length + 1));
+                setTypingSpeed(100);
+            }
+
+            if (!isDeleting && currentText === fullText) {
+                setTimeout(() => setIsDeleting(true), 2000);
+            } else if (isDeleting && currentText === '') {
+                setIsDeleting(false);
+                setCurrentIndex((prev) => (prev + 1) % (hero.titles as string[]).length);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [currentText, isDeleting, currentIndex, hero.titles, typingSpeed]);
+
     const isPixelActive = (r: number, c: number, currentOffset: number) => {
         // Flow logic from bottom-left to top-right
         const val = (c - r);
@@ -61,7 +89,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section ref={containerRef} className="relative min-h-screen flex items-center px-8 md:px-24 pt-48 overflow-hidden bg-transparent">
+        <section ref={containerRef} className="relative min-h-screen flex items-center px-8 md:px-24 pt-32 md:pt-40 overflow-hidden bg-transparent">
             {/* 
           Dyanmic Grid-Based Pixel Background 
           - Recalculates rows/cols on window resize or zoom
@@ -96,14 +124,15 @@ export const Hero: React.FC = () => {
                 </div>
             </div>
 
-            <div className="relative z-10 max-w-4xl space-y-10">
+            <div className="relative z-10 max-w-4xl space-y-10 md:-mt-20">
                 <div className="space-y-6">
-                    <h1 className="text-[12vw] md:text-[6.8rem] font-cabinet font-bold text-white leading-[0.85] tracking-tighter drop-shadow-sm reveal-text">
-                        {hero.title.split(' ').map((word, i) => (
+                    <h1 className="text-[12vw] md:text-[6.8rem] font-cabinet font-bold text-white leading-[0.85] tracking-tighter drop-shadow-sm min-h-[3em] md:min-h-[2.55em]">
+                        {currentText.split(' ').map((word, i, arr) => (
                             <React.Fragment key={i}>
                                 <span className={word.toUpperCase().includes('CRESCITA') ? 'text-orange' : ''}>
-                                    {word}
-                                </span> {i === 0 || i === 3 ? <br className="hidden md:block" /> : ''}
+                                    {word}{i === arr.length - 1 ? <span className="animate-pulse ml-1 opacity-80">|</span> : ' '}
+                                </span>
+                                {(word.toLowerCase() === 'where' || i === 2) && <br className="hidden md:block" />}
                             </React.Fragment>
                         ))}
                     </h1>

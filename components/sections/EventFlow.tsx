@@ -65,7 +65,7 @@ export const EventFlow: React.FC = () => {
                 {/* 1. Heading Layer */}
                 <div className="max-w-[100rem] mx-auto relative z-30 text-center flex flex-col items-center pt-8 pointer-events-none">
                     <h2 className="text-5xl md:text-8xl font-cabinet font-bold tracking-tight text-white leading-[0.9] uppercase reveal-text">
-                        At <span className="text-orange">Crescita</span>, We Believe Hackathons Should Be <span className="text-orange">More Than</span>
+                        At <span className="text-orange">Cresciton</span>, We Believe <span className="text-orange">Crescitons</span> Should Be <span className="text-orange">More Than</span>
                     </h2>
                     <div className="mt-8 px-8 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 reveal">
                         <span className="apple-reveal-text font-bold text-sm tracking-[0.3em] uppercase italic italic">
@@ -159,7 +159,7 @@ export const EventFlow: React.FC = () => {
 
                 {/* 4. Legend Text */}
                 <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 opacity-20 hidden md:block">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.6em] text-white">A 34-Hour Continuous Cycle of Innovation</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.6em] text-white">A 30-Hour Continuous Cycle of Innovation</p>
                 </div>
 
                 <style jsx global>{`
@@ -194,4 +194,3 @@ export const EventFlow: React.FC = () => {
         </>
     );
 };
-``

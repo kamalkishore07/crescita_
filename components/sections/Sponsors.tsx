@@ -5,12 +5,9 @@ export const Sponsors: React.FC = () => {
     const { sponsors } = content;
 
     const sponsorLogos = [
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_tech_corp_1769257329908.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_innovate_systems_1769257344723.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_future_labs_1769250528511_1769257359561.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_dev_studio_1769250545599_1769257376432.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_cloud_native_1769250561478_1769257393328.png",
-        "C:/Users/spicez/.gemini/antigravity/brain/b39e97c8-6824-4992-9ae0-545c3be71f52/logo_code_masters_1769250575813_1769257408767.png"
+        "/Images/Sponsors/kogenix.png",
+        "/Images/Sponsors/csir-cmeri.png",
+        "/Images/Sponsors/vps-code-builders.jpg"
     ];
 
     return (
@@ -39,14 +36,14 @@ export const Sponsors: React.FC = () => {
                             key={i}
                             className="inline-block w-[280px] md:w-[400px] mx-6 relative"
                         >
-                            <div className="bg-[#111] border border-white/5 rounded-3xl p-10 md:p-12 h-[220px] flex flex-col items-center justify-center text-center transition-all duration-300 overflow-hidden relative group/card hover:border-orange/50 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] hover:-translate-y-1">
+                            <div className="bg-[#111] border border-white/5 rounded-3xl p-10 md:p-12 h-[220px] flex flex-col items-center justify-center text-center transition-all duration-500 overflow-hidden relative group group/card hover:border-orange/50 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] hover:scale-[1.05]">
                                 <div className="gloss-sheen"></div>
                                 {/* Logo View */}
                                 <div className="group-hover/card:opacity-0 group-hover/card:-translate-y-4 transition-all duration-500 flex items-center justify-center w-full h-full">
                                     <img
                                         src={sponsorLogos[i % sponsorLogos.length]}
                                         alt={sponsor.name}
-                                        className="max-w-[180px] md:max-w-[240px] max-h-[100px] object-contain brightness-0 invert opacity-40 group-hover/card:opacity-100 transition-all duration-500"
+                                        className="max-w-[180px] md:max-w-[240px] max-h-[100px] object-contain transition-all duration-500"
                                         onError={(e) => {
                                             const target = e.target as HTMLImageElement;
                                             target.style.display = 'none';

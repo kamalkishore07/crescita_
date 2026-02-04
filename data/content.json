@@ -1,18 +1,18 @@
 {
     "navbar": {
-        "logo": "Crescita",
+        "logo": "Cresciton",
         "links": [
             {
                 "label": "Flow",
                 "href": "#flow"
             },
             {
-                "label": "Prizes",
-                "href": "#prizes"
-            },
-            {
                 "label": "Sponsors",
                 "href": "#sponsors"
+            },
+            {
+                "label": "Contact",
+                "href": "#organisers"
             },
             {
                 "label": "Venue",
@@ -22,8 +22,16 @@
         "cta": "Register Now"
     },
     "hero": {
-        "title": "Where Ideas Grow Into Impact.",
-        "description": "24 Hours of Innovation · Code · Creativity. Join us for the ultimate college hackathon experience.",
+        "titles": [
+            "Where Ideas Become Reality.",
+            "Where Code Meets Creativity.",
+            "Where Innovation Takes Shape.",
+            "Where Ideas Turn Into Solutions.",
+            "Where Builders Create The Future.",
+            "Where Concepts Become Creations.",
+            "Where Vision Meets Execution."
+        ],
+        "description": "30 Hours of Innovation · Code · Creativity. Join us for the ultimate college Cresciton experience.",
         "cta": "Register Now"
     },
     "techEvents": {
@@ -58,14 +66,58 @@
                 ]
             },
             {
-                "title": "Hackathon",
-                "description": "A 24-hour sprint to build innovative solutions for real-world problems.",
+                "title": "Cresciton",
+                "description": "A 30-hour sprint to build innovative solutions for real-world problems.",
                 "icon": "MdTimer",
                 "modalDetails": [
                     {
                         "image": "https://images.unsplash.com/photo-1504384308090-c54be3855833?q=80&w=2062&auto=format&fit=crop",
-                        "title": "24H Hackathon",
-                        "description": "Join us for an electrifying 24-hour hackathon where your coding skills will be put to the ultimate test. Build, innovate, and disrupt mechanisms to solve real-world challenges. With mentorship from industry experts and a pool of talented peers, this is your chance to turn your ideas into reality."
+                        "title": "Cresciton",
+                        "description": "Join us for an electrifying 30-hour Cresciton where your coding skills will be put to the ultimate test. Build, innovate, and disrupt mechanisms to solve real-world challenges. With mentorship from industry experts and a pool of talented peers, this is your chance to turn your ideas into reality.",
+                        "problemStatements": [
+                            {
+                                "title": "AI-Based Video Analytics for Perimeter Security",
+                                "shortDescription": "Advanced AI video analytics for enhanced perimeter security.",
+                                "fullDescription": "Develop an AI-driven system for video analytics to enhance perimeter security. The system should use computer vision to detect and alert on unauthorized intrusions or suspicious activities around sensitive defense boundaries.",
+                                "driveLink": "https://drive.google.com/file/d/1QwqRqBNipm-IBXnHnCPzlYDGsLvELagH/view?usp=sharing"
+                            },
+                            {
+                                "title": "Secure Battlefield Communication Simulator (Non-Operational)",
+                                "shortDescription": "Simulator for secure communication in battlefield environments.",
+                                "fullDescription": "Create a non-operational simulation platform focused on secure communication within battlefield environments. The goal is to model and test encrypted data exchange and resilient network topologies for defense.",
+                                "driveLink": "https://drive.google.com/file/d/1DpfjnqkaL8GXOCNiJ2YfSWlCem9R8qoq/view?usp=sharing"
+                            },
+                            {
+                                "title": "Cyber Threat Detection System for Defense Networks",
+                                "shortDescription": "Dedicated cyber threat detection for defense networks.",
+                                "fullDescription": "Build a cyber threat detection system tailored for defense networks. The system should employ advanced monitoring and analysis techniques to identify and mitigate potential security breaches and malicious activities.",
+                                "driveLink": "https://drive.google.com/file/d/18LD5s5OOa1m_rc8qEBDHixyIVBcae2tw/view?usp=sharing"
+                            },
+                            {
+                                "title": "Smart Garments Engine",
+                                "shortDescription": "Intelligent recommendation engine for smart garments.",
+                                "fullDescription": "Develop a smart garments engine integrated with a knowledge base for intelligent recommendations. The focus should be on performance, health monitoring, or tactical assistance for personnel.",
+                                "driveLink": "https://docs.google.com/presentation/d/1qQt-jdQPXAjij0lbSIhF00WBjTmaUjkL/edit?usp=sharing"
+                            },
+                            {
+                                "title": "AI-Powered Knowledge Base",
+                                "shortDescription": "AI-powered system for intelligent info storage and retrieval.",
+                                "fullDescription": "Build an AI-powered knowledge base designed for intelligent information storage and retrieval, streamlining the management of complex data and facilitating efficient access to critical information.",
+                                "driveLink": "https://docs.google.com/presentation/d/1cnhU1IeNXkWsilktdxbh7V8Keh10r9ap/edit?usp=sharing"
+                            },
+                            {
+                                "title": "AI-Based Early Warning System for Landslides",
+                                "shortDescription": "Early warning system for landslides affecting defense infra.",
+                                "fullDescription": "Develop an AI-based early warning system for monitoring and predicting landslides that could impact strategic defense infrastructure, providing timely alerts to prevent damage.",
+                                "driveLink": "https://drive.google.com/file/d/1WEtcyYoKZRC5JyqqqrQ0ZfqxbTW-UE1z/view?usp=sharing"
+                            },
+                            {
+                                "title": "AI-Based CAR Monitoring System",
+                                "shortDescription": "AI monitoring for mine-induced instability near defense zones.",
+                                "fullDescription": "Create a monitoring system using AI to track Carbon Absorption Rates (CAR) to identify terrain instability caused by mining near defense zones, ensuring environmental and structural safety.",
+                                "driveLink": "https://drive.google.com/file/d/1WyV4mDT2FbfK3gtAQklTdPbF_jmcZk8N/view?usp=sharing"
+                            }
+                        ]
                     }
                 ]
             },
@@ -90,8 +142,8 @@
     },
     "stats": {
         "logos": [
-            "https://renaissance-2k25.netlify.app/assets/kec-Bk1A3mt5.png",
-            "https://renaissance-2k25.netlify.app/assets/csea-B29j3Ac0.png",
+            "/logos/kec-logo.png",
+            "/logos/csea-logo.png",
             "https://renaissance-2k25.netlify.app/assets/ccclogo-DNGmJy1i.png"
         ],
         "items": [
@@ -101,113 +153,52 @@
             },
             {
                 "name": "CSEA",
-                "paragraph": "The Computer Science and Engineering Association (CSEA) is a vibrant student-driven body that forms the backbone of academic, technical, and cultural activities in the CSE department. It serves as a dynamic forum where students come together to explore, learn, and innovate beyond the classroom. By organizing guest lectures, technical talks, workshops, hackathons, symposium, and cultural events, CSEA provides ample opportunities to sharpen technical knowledge, foster leadership, and nurture creativity. Acting as a bridge between industry, and students, the association keeps members connected with emerging technologies while encouraging collaboration, problem-solving, and holistic growth. With its diverse initiatives, CSEA not only cultivates professional excellence but also builds a strong sense of community, preparing students to meet industry expectations and contribute meaningfully to society."
+                "paragraph": "The Computer Science and Engineering Association (CSEA) is a vibrant student-driven body that forms the backbone of academic, technical, and cultural activities in the CSE department. It serves as a dynamic forum where students come together to explore, learn, and innovate beyond the classroom. By organizing guest lectures, technical talks, workshops, Crescitons, symposium, and cultural events, CSEA provides ample opportunities to sharpen technical knowledge, foster leadership, and nurture creativity. Acting as a bridge between industry, and students, the association keeps members connected with emerging technologies while encouraging collaboration, problem-solving, and holistic growth. With its diverse initiatives, CSEA not only cultivates professional excellence but also builds a strong sense of community, preparing students to meet industry expectations and contribute meaningfully to society."
             },
             {
                 "name": "CCC",
-                "paragraph": "The CSE Coding Club is a vibrant community of coding enthusiasts in the Computer Science and Engineering department. By organizing coding events, hackathons, workshops, and mock drives, the club empowers students to sharpen their coding skills, think creatively, and tackle real-world problems. These activities foster a spirit of innovation, teamwork, and healthy competition among members. The CSE Coding Club is an ideal platform for students to learn from peers, get hands-on experience with cutting-edge technologies, and build a strong portfolio of coding projects."
+                "paragraph": "The CSE Coding Club is a vibrant community of coding enthusiasts in the Computer Science and Engineering department. By organizing coding events, Crescitons, workshops, and mock drives, the club empowers students to sharpen their coding skills, think creatively, and tackle real-world problems. These activities foster a spirit of innovation, teamwork, and healthy competition among members. The CSE Coding Club is an ideal platform for students to learn from peers, get hands-on experience with cutting-edge technologies, and build a strong portfolio of coding projects."
             }
         ]
     },
     "eventFlow": {
-        "title": "At Crescita, We Believe Hackathons Should Be More Than",
+        "title": "At Cresciton, We Believe Crescitons Should Be More Than",
         "highlight": "Just A Code-A-Thon.",
         "centerNode": {
-            "number": "24",
+            "number": "30",
             "label": "HOURS"
         },
-        "productivityTitle": "The Hackathon Journey",
+        "productivityTitle": "The Cresciton Journey",
         "tags": [
-            "Final Pitch",
-            "Mentoring",
-            "Development",
-            "Ideation",
+            "Registration",
             "Team Formation",
-            "Registration"
+            "Ideation",
+            "Development",
+            "Mentoring",
+            "Final Pitch"
         ],
         "sideLabels": [
             "Unleash Creativity",
             "Impactful Innovation"
         ]
     },
-    "prizes": {
-        "title": "Transparent Rewards For All Builders",
-        "tabs": [
-            "Main Prizes",
-            "Category Prizes"
-        ],
-        "cards": [
-            {
-                "type": "Runner Up",
-                "value": "₹25,000",
-                "unit": "/team",
-                "button": "View Details",
-                "includes": [
-                    "Cash Reward",
-                    "Participation Certificate",
-                    "Cloud Credits",
-                    "Internship Opportunities"
-                ]
-            },
-            {
-                "type": "Special Mention",
-                "value": "₹10,000",
-                "unit": "/team",
-                "button": "Explore Tracks",
-                "includes": [
-                    "Track Specific Reward",
-                    "Sponsor Goodies",
-                    "Voucher Kits",
-                    "Certificate of Merit"
-                ]
-            },
-            {
-                "type": "Winner",
-                "value": "₹50,000",
-                "unit": "/team",
-                "button": "Register Now",
-                "includes": [
-                    "Grand Cash Prize",
-                    "Premium Trophies",
-                    "Incubation Support",
-                    "Direct Interview Rounds"
-                ],
-                "variant": "dark"
-            }
-        ]
-    },
     "sponsors": {
         "title": "Powering Innovation With Industry Visionaries",
         "partners": [
             {
-                "name": "Tech Corp",
-                "description": "Global leaders in cloud computing and AI infrastructure.",
+                "name": "Kogenix.ai",
+                "description": "Think Build Evolve - Leading AI innovation and development.",
                 "tier": "Title Sponsor"
             },
             {
-                "name": "Innovate Systems",
-                "description": "Driving Digital Transformation for Fortune 500 companies.",
+                "name": "CSIR-CMERI Durgapur",
+                "description": "Council of Scientific & Industrial Research - Central Mechanical Engineering Research Institute.",
                 "tier": "Gold Sponsor"
             },
             {
-                "name": "Future Labs",
-                "description": "Accelerating breakthrough research in quantum computing.",
+                "name": "VPS Code Builders",
+                "description": "Building innovative solutions through code excellence.",
                 "tier": "Gold Sponsor"
-            },
-            {
-                "name": "Dev Studio",
-                "description": "The world's most popular IDE and developer ecosystem.",
-                "tier": "Silver Sponsor"
-            },
-            {
-                "name": "Cloud Native",
-                "description": "Standardizing the future of scalable application delivery.",
-                "tier": "Silver Sponsor"
-            },
-            {
-                "name": "Code Masters",
-                "description": "Educational platform for elite software engineering talent.",
-                "tier": "Bronze Sponsor"
             }
         ]
     },
