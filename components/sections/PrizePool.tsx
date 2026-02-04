@@ -60,7 +60,7 @@ export const PrizePool: React.FC = () => {
                                 ${isFirst ? 'order-2 z-20' : i === 0 ? 'order-1 z-10' : 'order-3 z-0'} relative reveal`}
                             >
                                 {isFirst && (
-                                    <div className="absolute bottom-[95%] left-1/2 -translate-x-1/2 w-[90%] md:w-[110%] z-30 pointer-events-none mb-[-2rem]">
+                                    <div className="hidden md:block absolute bottom-[95%] left-1/2 -translate-x-1/2 w-[90%] md:w-[110%] z-30 pointer-events-none mb-[-2rem]">
                                         <img
                                             src="/Illustrations/I2.png"
                                             alt="Winner Illustration"

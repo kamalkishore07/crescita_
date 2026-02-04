@@ -148,8 +148,8 @@ export const Hero: React.FC = () => {
                 </div>
             </div>
 
-            {/* Hero Illustration */}
-            <div className="absolute bottom-0 right-0 z-20 w-[90%] md:w-[45%] lg:w-[40%] pointer-events-none translate-y-[10%] translate-x-[10%] reveal">
+            {/* Hero Illustration - Hidden on mobile/tablet to prevent text blocking */}
+            <div className="hidden md:block absolute bottom-0 right-0 z-20 w-[90%] md:w-[45%] lg:w-[40%] pointer-events-none translate-y-[10%] translate-x-[10%] reveal">
                 <img
                     src="/Illustrations/I1.png"
                     alt="Hero Illustration"

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { IntroOverlay } from '../components/Intro/IntroOverlay';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
@@ -111,6 +112,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-orange/30 relative">
+      <IntroOverlay />
       {/* Global Background Effects */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
 
