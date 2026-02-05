@@ -34,6 +34,27 @@
         "description": "30 Hours of Innovation · Code · Creativity. Join us for the ultimate college Cresciton experience.",
         "cta": "Register Now"
     },
+    "sdgGoals": {
+        "title": "Building for a Better Future",
+        "description": "Aligned with the United Nations Sustainable Development Goals",
+        "goals": [
+            {
+                "logo": "/logos/sdg4.png",
+                "title": "Quality Education",
+                "description": "Empowering students through hands-on learning, mentorship, and skill development in emerging technologies."
+            },
+            {
+                "logo": "/logos/sdg9.png",
+                "title": "Industry, Innovation & Infrastructure",
+                "description": "Creating innovative technological solutions to real-world challenges and building robust digital infrastructure."
+            },
+            {
+                "logo": "/logos/sdg17.png",
+                "title": "Partnerships for the Goals",
+                "description": "Bringing together academia, industry, and student organizations to drive collaborative innovation."
+            }
+        ]
+    },
     "techEvents": {
         "title": "Experience Innovation",
         "description": "Explore a variety of events designed to challenge and inspire.",

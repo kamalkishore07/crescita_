@@ -89,6 +89,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
+        <>
         <section ref={containerRef} className="relative min-h-screen flex items-center px-8 md:px-24 pt-32 md:pt-40 overflow-hidden bg-transparent">
             {/* 
           Dyanmic Grid-Based Pixel Background 
@@ -149,7 +150,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Hero Illustration - Hidden on mobile/tablet to prevent text blocking */}
-            <div className="hidden md:block absolute bottom-0 right-0 z-20 w-[90%] md:w-[45%] lg:w-[40%] pointer-events-none translate-y-[10%] translate-x-[10%] reveal">
+            <div className="hidden md:block relative bottom-0 right-0 z-20 w-[90%] md:w-[45%] lg:w-[40%] pointer-events-none translate-y-[10%] translate-x-[5%] reveal">
                 <img
                     src="/Illustrations/I1.png"
                     alt="Hero Illustration"
@@ -157,5 +158,41 @@ export const Hero: React.FC = () => {
                 />
             </div>
         </section>
+
+        {/* SDG Goals Section */}
+        <section className="py-20 md:py-28 px-8 md:px-24 bg-gradient-to-b from-transparent to-black/20">
+            <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-white mb-4">
+                        {content.sdgGoals.title}
+                    </h2>
+                    <p className="text-lg text-white/60">
+                        {content.sdgGoals.description}
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {content.sdgGoals.goals.map((goal, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center text-center p-8 rounded-lg border border-orange/20 hover:border-orange/50 hover:bg-orange/5 transition-all duration-300"
+                        >
+                            <img
+                                src={goal.logo}
+                                alt={goal.title}
+                                className="w-24 h-24 mb-6 object-contain"
+                            />
+                            <h3 className="text-xl font-bold text-white mb-3">
+                                {goal.title}
+                            </h3>
+                            <p className="text-white/70">
+                                {goal.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+        </>
     );
 };
