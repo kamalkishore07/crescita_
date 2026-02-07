@@ -24,70 +24,80 @@ export const Organisers: React.FC = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col items-center text-center space-y-3 mb-20">
-                    <span className="text-orange font-bold text-[9px] tracking-[0.4em] uppercase reveal-text">The Visionaries</span>
+                    <span className="text-orange font-bold text-[9px] tracking-[0.4em] uppercase reveal-text">The Team</span>
                     <h2 className="text-white text-4xl md:text-6xl font-cabinet font-bold tracking-tight uppercase leading-[0.85] reveal-text">
-                        Meet The <span className="text-orange">Organizers</span>
+                        {organisers.title.split(' ').map((word, i) => (
+                            <span key={i} className={i === 1 ? "text-orange" : ""}>
+                                {word}{' '}
+                            </span>
+                        ))}
                     </h2>
                     <p className="text-white/50 text-sm max-w-2xl mt-4 reveal-text">
-                        Have questions? Reach out to our dedicated team of organizers
+                        Have questions? Reach out to our dedicated team of coordinators
                     </p>
                 </div>
 
                 {/* Organizers Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {organisers.members.map((member, i) => {
                         const colorScheme = getColorScheme(i);
 
                         return (
                             <div
                                 key={i}
-                                className={`relative bg-[#111] rounded-3xl border ${colorScheme.border} ${colorScheme.hover} p-8 transition-all duration-500 hover:scale-[1.02] group reveal overflow-hidden`}
+                                className={`relative bg-[#111] rounded-[2rem] border ${colorScheme.border} ${colorScheme.hover} p-8 transition-all duration-500 hover:scale-[1.02] group reveal overflow-hidden flex flex-col items-center text-center h-full`}
                             >
                                 <div className="gloss-sheen"></div>
 
-                                {/* Icon/Avatar */}
-                                <div className="relative z-10 mb-6">
-                                    <div className={`w-16 h-16 rounded-2xl ${colorScheme.bg} border ${colorScheme.border} flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
-                                        <FiUser className={`w-8 h-8 ${colorScheme.text}`} />
+                                {/* Avatar/Image Container */}
+                                <div className="relative z-10 mb-8 group/avatar w-full flex justify-center">
+                                    <div className={`w-40 h-40 rounded-2xl ${colorScheme.bg} border-2 ${colorScheme.border} overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-2xl shadow-black/40`}>
+                                        {member.image ? (
+                                            <img
+                                                src={member.image}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        ) : (
+                                            <FiUser className={`w-16 h-16 ${colorScheme.text} opacity-50`} />
+                                        )}
+                                    </div>
+
+                                    {/* Verification Badge Overlay */}
+                                    <div className="absolute top-2 right-[calc(50%-80px-4px)] bg-[#111] rounded-full p-1.5 z-20 shadow-xl border border-white/5">
+                                        <MdVerified className="text-[#00BA34] text-2xl" />
                                     </div>
                                 </div>
 
-                                {/* Name & Verification */}
-                                <div className="relative z-10 mb-2">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <h3 className="text-xl font-bold tracking-tight text-white leading-tight">
-                                            {member.name}
-                                        </h3>
-                                        <MdVerified className="text-[#00BA34] text-xl flex-shrink-0" />
+                                {/* Info */}
+                                <div className="relative z-10 w-full mb-8">
+                                    <h3 className="text-xl font-bold tracking-tight text-white leading-tight mb-2">
+                                        {member.name}
+                                    </h3>
+                                    <div className={`inline-block px-3 py-1 rounded-full ${colorScheme.bg} border ${colorScheme.border}`}>
+                                        <p className={`text-[11px] font-bold ${colorScheme.text} uppercase tracking-widest`}>
+                                            {member.role}
+                                        </p>
                                     </div>
                                 </div>
-
-                                {/* Role */}
-                                <p className={`relative z-10 text-sm font-semibold ${colorScheme.text} mb-6 uppercase tracking-wide`}>
-                                    {member.role}
-                                </p>
 
                                 {/* Contact Info */}
-                                <div className="relative z-10 space-y-3">
-                                    {/* Phone */}
+                                <div className="relative z-10 w-full mt-auto">
                                     <a
                                         href={`tel:${member.phone}`}
-                                        className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/phone"
+                                        className="flex items-center justify-center gap-3 py-4 px-6 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/phone"
                                     >
-                                        <div className={`w-10 h-10 rounded-xl ${colorScheme.bg} border ${colorScheme.border} flex items-center justify-center flex-shrink-0`}>
-                                            <MdPhone className={`w-5 h-5 ${colorScheme.text}`} />
+                                        <div className={`w-8 h-8 rounded-lg ${colorScheme.bg} flex items-center justify-center`}>
+                                            <MdPhone className={`w-4 h-4 ${colorScheme.text}`} />
                                         </div>
-                                        <div className="flex-1 min-w-0">
-                                            <p className="text-[10px] uppercase tracking-wider text-white/40 font-bold mb-0.5">Phone</p>
-                                            <p className="text-sm font-semibold text-white/90 group-hover/phone:text-white transition-colors">
-                                                {member.phone}
-                                            </p>
-                                        </div>
+                                        <span className="text-sm font-semibold text-white/90 group-hover/phone:text-white transition-colors">
+                                            {member.phone}
+                                        </span>
                                     </a>
                                 </div>
 
                                 {/* Decorative gradient */}
-                                <div className={`absolute -bottom-20 -right-20 w-40 h-40 ${colorScheme.bg} rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                                <div className={`absolute -bottom-16 -right-16 w-32 h-32 ${colorScheme.bg} rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
                             </div>
                         );
                     })}

@@ -224,37 +224,55 @@
         ]
     },
     "organisers": {
-        "title": "Built By Builders For Builders",
+        "title": "Event Coordinators",
         "members": [
             {
                 "name": "Prasanndh Raju M R",
                 "role": "Secretary (CSEA)",
-                "phone": "8946050246"
+                "phone": "8946050246",
+                "image": "/prasanndh.jpeg"
             },
             {
                 "name": "Divya K",
                 "role": "Secretary (CCC)",
-                "phone": "6374939491"
-            },
-            {
-                "name": "Samvardhini D",
-                "role": "Treasurer (CSEA)",
-                "phone": "9487183168"
-            },
-            {
-                "name": "Ragulandiran M",
-                "role": "Treasurer (CCC)",
-                "phone": "9629074704"
+                "phone": "6374939491",
+                "image": "/divya.jpeg"
             },
             {
                 "name": "Kamal Kishore V",
                 "role": "Joint Secretary (CSEA)",
-                "phone": "7530086388"
+                "phone": "7530086388",
+                "image": "/kamal.jpeg"
             },
             {
-                "name": "Varshini S",
+                "name": "Dharaneesh SS",
                 "role": "Joint Secretary (CCC)",
-                "phone": "9940849979"
+                "phone": "+91 78457 59168",
+                "image": "/dharaneesh.jpeg"
+            },
+            {
+                "name": "Shree Varshana R",
+                "role": "Joint Secretary (CSEA)",
+                "phone": "+91 877 895 0902",
+                "image": "/shree varshana.jpeg"
+            },
+            {
+                "name": "Shubha Shree",
+                "role": "Joint Treasurer (CCC)",
+                "phone": "+91 861 099 2902",
+                "image": "/shuba.jpeg"
+            },
+            {
+                "name": "Arvind R",
+                "role": "Joint Treasurer (CSEA)",
+                "phone": "+91 81225 77433",
+                "image": "/arvind.jpeg"
+            },
+            {
+                "name": "Shashwant",
+                "role": "Joint Secretary (CSEA)",
+                "phone": "+91 863 742 2716",
+                "image": "/shaswanth.jpeg"
             }
         ]
     },
