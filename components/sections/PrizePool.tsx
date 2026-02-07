@@ -3,35 +3,10 @@ import { Button } from '../ui/Button';
 import content from '../../data/content.json';
 
 export const PrizePool: React.FC = () => {
-    const { prizes } = content;
+    // const { prizes } = content;
 
     // Map content to specific podium slots with traditional labels
-    const podiumSlots = [
-        {
-            ...prizes.cards[0],
-            rank: '#2',
-            h: 'md:h-[320px]',
-            color: 'border-[#C0C0C0] shadow-lg shadow-[#C0C0C0]/10', // Silver
-            rankColor: 'text-[#9A9A9A]',
-            badge: 'Runner Up'
-        },
-        {
-            ...prizes.cards[2],
-            rank: '#1',
-            h: 'md:h-[400px]',
-            color: 'border-[#FFD700] shadow-2xl scale-105 shadow-[#FFD700]/20', // Gold
-            rankColor: 'text-[#FFD700]',
-            badge: 'Winner'
-        },
-        {
-            ...prizes.cards[1],
-            rank: '#3',
-            h: 'md:h-[260px]',
-            color: 'border-[#CD7F32] shadow-lg shadow-[#CD7F32]/10', // Bronze
-            rankColor: 'text-[#A0522D]',
-            badge: 'Spl Mention'
-        }
-    ];
+    const podiumSlots: any[] = [];
 
     return (
         <section id="prizes" className="pt-24 pb-32 px-4 sm:px-8 md:px-16 bg-transparent relative overflow-hidden">
