@@ -46,7 +46,7 @@ export const Venue: React.FC = () => {
                                 <div className="flex items-center gap-2 text-orange font-bold text-[10px] tracking-widest uppercase">
                                     <MdCalendarToday size={16} /> Mark the dates
                                 </div>
-                                <h3 className="text-2xl font-bold tracking-tight text-white">Jan 25 — 27, 2026</h3>
+                                <h3 className="text-2xl font-bold tracking-tight text-white">March 06 — 07, 2026</h3>
                                 <div className="flex items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-widest">
                                     <MdCheckCircle className="text-green-500" /> 30 Hours Continuous
                                 </div>

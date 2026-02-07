@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaGithub, FaXTwitter, FaInstagram } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa6';
 import { MdEmail, MdPhone, MdArrowForward } from 'react-icons/md';
 import { Card } from '../ui/Card';
+import content from '../../data/content.json';
 
 export const Footer: React.FC = () => {
     return (
@@ -13,9 +14,7 @@ export const Footer: React.FC = () => {
                     {/* Column 1: Brand */}
                     <div className="space-y-6">
                         <img src="/Images/Logo/Logo.png" alt="Crescita Logo" className="h-24 w-auto object-contain" />
-                        <p className="text-sm text-white/60 leading-relaxed font-bold max-w-xs">
-                            The premier Cresciton for the next generation of builders and innovators.
-                        </p>
+
                     </div>
 
                     {/* Column 2: Navigation */}
@@ -28,22 +27,17 @@ export const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact */}
-                    <div className="space-y-6">
-                        <h4 className="font-bold uppercase tracking-[0.2em] text-[10px] text-orange">Contact</h4>
-                        <ul className="space-y-3 text-[11px] font-bold text-white/60 uppercase tracking-widest">
-                            <li className="flex items-center gap-2">hello@crescita.in</li>
-                            <li className="flex items-center gap-2">+91 98765 43210</li>
-                        </ul>
-                    </div>
+                    {/* Column 3: Contact - Removed as per request */}
 
                     {/* Column 4: Socials */}
                     <div className="space-y-6">
                         <h4 className="font-bold uppercase tracking-[0.2em] text-[10px] text-orange">Connect</h4>
                         <div className="flex gap-4">
-                            {[FaGithub, FaXTwitter, FaInstagram].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:!bg-[#E3B23C] hover:text-black hover:border-orange transition-all duration-300 text-white/60">
-                                    <Icon />
+                            {[
+                                { Icon: FaInstagram, href: content.socials.instagram }
+                            ].map((social, i) => (
+                                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:!bg-[#E3B23C] hover:text-black hover:border-orange transition-all duration-300 text-white/60">
+                                    <social.Icon />
                                 </a>
                             ))}
                         </div>
@@ -53,7 +47,7 @@ export const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-12">
                     <div className="flex flex-col md:items-start items-center gap-2">
                         <span>&copy; 2026 Cresciton</span>
-                        <span className="text-[9px] opacity-80 normal-case tracking-widest">Developed & Maintained by Yuga Bharathi J, Varun Kumar N</span>
+                        <span className="text-[9px] opacity-80 normal-case tracking-widest">Developed & Maintained by Yuga Bharathi J, Varun Kumar N & Kamal Kishore V</span>
                     </div>
                     <div className="flex gap-1 items-center">
                         <span>Made with</span>

@@ -19,7 +19,8 @@
                 "href": "#venue"
             }
         ],
-        "cta": "Register Now"
+        "cta": "Register Now",
+        "ctaLink": "https://docs.google.com/forms/d/e/1FAIpQLSc0Lfls2U9KLH2ihBJijURVMP9fotBN7_FHjfTUfsusIl7WLA/viewform?usp=dialog"
     },
     "hero": {
         "titles": [
@@ -32,7 +33,8 @@
             "Where Vision Meets Execution."
         ],
         "description": "30 Hours of Innovation · Code · Creativity. Join us for the ultimate college Cresciton experience.",
-        "cta": "Register Now"
+        "cta": "Register Now",
+        "ctaLink": "https://docs.google.com/forms/d/e/1FAIpQLSc0Lfls2U9KLH2ihBJijURVMP9fotBN7_FHjfTUfsusIl7WLA/viewform?usp=dialog"
     },
     "sdgGoals": {
         "title": "Building for a Better Future",
@@ -62,6 +64,7 @@
             {
                 "title": "Tech Events",
                 "description": "Engage in competitive coding, debugging, and tech quizzes to test your skills.",
+                "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop",
                 "icon": "MdCode",
                 "modalDetails": [
                     {
@@ -70,12 +73,12 @@
                         "description": "A platform to voice your ideas and debate on trending tech topics."
                     },
                     {
-                        "image": "https://images.unsplash.com/photo-1516259762381-229ca2d160bd?q=80&w=2069&auto=format&fit=crop",
+                        "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop",
                         "title": "Pitch to Prove It",
                         "description": "Showcase your innovative ideas and convince the judges in this pitching battle."
                     },
                     {
-                        "image": "https://images.unsplash.com/photo-1504384308090-c54be3855833?q=80&w=2062&auto=format&fit=crop",
+                        "image": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=2070&auto=format&fit=crop",
                         "title": "Bid 2 Build",
                         "description": "Strategize, bid for resources, and build the ultimate solution with what you have."
                     },
@@ -87,12 +90,13 @@
                 ]
             },
             {
-                "title": "Cresciton",
+                "title": "Cresciton (30 Hour Hackathon)",
                 "description": "A 30-hour sprint to build innovative solutions for real-world problems.",
+                "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
                 "icon": "MdTimer",
                 "modalDetails": [
                     {
-                        "image": "https://images.unsplash.com/photo-1504384308090-c54be3855833?q=80&w=2062&auto=format&fit=crop",
+                        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
                         "title": "Cresciton",
                         "description": "Join us for an electrifying 30-hour Cresciton where your coding skills will be put to the ultimate test. Build, innovate, and disrupt mechanisms to solve real-world challenges. With mentorship from industry experts and a pool of talented peers, this is your chance to turn your ideas into reality.",
                         "problemStatements": [
@@ -145,16 +149,17 @@
             {
                 "title": "Workshops",
                 "description": "Hands-on sessions on AI, Blockchain, and more by industry experts.",
+                "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop",
                 "icon": "MdSchool",
                 "modalDetails": [
                     {
                         "image": "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop",
-                        "title": "March 6th Workshop",
+                        "title": "CreateX",
                         "description": "Join us on March 6th for an immersive deep-dive session. Topic and details coming soon."
                     },
                     {
                         "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
-                        "title": "March 7th Workshop",
+                        "title": "CyberX",
                         "description": "Day 2 of learning! Join us on March 7th for advanced concepts and hands-on practice."
                     }
                 ]
@@ -281,7 +286,7 @@
         "days": [
             {
                 "day": "Day 01",
-                "date": "Jan 25, 2026",
+                "date": "March 06, 2026",
                 "events": [
                     {
                         "time": "09:00 AM",
@@ -312,7 +317,7 @@
             },
             {
                 "day": "Day 02",
-                "date": "Jan 26, 2026",
+                "date": "March 07, 2026",
                 "events": [
                     {
                         "time": "08:00 AM",
@@ -342,5 +347,8 @@
                 ]
             }
         ]
+    },
+    "socials": {
+        "instagram": "https://www.instagram.com/csea_kec/"
     }
 }

@@ -26,6 +26,7 @@ interface TechEventItem {
     title: string;
     description: string;
     icon: string;
+    image?: string;
     modalDetails?: TechEventDetail[];
 }
 
@@ -83,25 +84,37 @@ export const TechEvents: React.FC = () => {
                             <div
                                 key={i}
                                 onClick={() => handleCardClick(item)}
-                                className={`bg-[#111] p-8 rounded-[2rem] relative overflow-hidden flex flex-col items-center text-center space-y-6 shadow-lg shadow-black/20 hover:shadow-orange/10 transition-all duration-500 hover:scale-[1.03] border border-white/5 hover:border-orange/20 group reveal ${item.modalDetails ? 'cursor-pointer' : ''}`}
+                                className={`group relative bg-[#1A1A1A] rounded-[2rem] overflow-hidden flex flex-col items-center justify-end text-center p-8 h-[400px] shadow-lg shadow-black/20 hover:shadow-orange/10 transition-all duration-500 hover:scale-[1.03] border border-white/5 hover:border-orange/20 reveal cursor-pointer`}
                             >
-                                <div className="gloss-sheen"></div>
-                                {/* Icon Container */}
-                                <div className="w-20 h-20 rounded-2xl bg-orange/10 flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all duration-500">
-                                    <Icon className="text-4xl" />
+                                {/* Background Image with Overlay */}
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
                                 </div>
 
-                                <div className="space-y-3">
-                                    <h3 className="text-2xl font-bold text-white">
+                                <div className="gloss-sheen"></div>
+
+                                {/* Content */}
+                                <div className="relative z-10 space-y-4 flex flex-col items-center">
+                                    {/* Icon Container */}
+                                    <div className="w-16 h-16 rounded-2xl bg-orange/20 backdrop-blur-md flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all duration-500 border border-white/10">
+                                        <Icon className="text-3xl" />
+                                    </div>
+
+                                    <h3 className="text-2xl font-bold text-white group-hover:text-orange transition-colors">
                                         {item.title}
                                     </h3>
-                                    <p className="text-white/50 font-medium leading-relaxed">
+                                    <p className="text-white/70 font-medium leading-relaxed max-w-xs">
                                         {item.description}
                                     </p>
                                 </div>
 
                                 {/* Hover Indicator */}
-                                <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-orange/0 group-hover:bg-orange transition-all duration-500 delay-100" />
+                                <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-white/20 group-hover:bg-orange transition-all duration-500 delay-100 z-10" />
                             </div>
                         );
                     })}
@@ -166,7 +179,10 @@ export const TechEvents: React.FC = () => {
                                                     {detail.description}
                                                 </p>
                                                 <div className="flex flex-wrap gap-4">
-                                                    <button className="px-6 md:px-8 py-2 md:py-3 bg-orange text-white rounded-full font-bold shadow-lg shadow-orange/20 hover:scale-105 transition-transform text-sm md:text-base">
+                                                    <button
+                                                        onClick={() => window.open(content.hero.ctaLink, '_blank')}
+                                                        className="px-6 md:px-8 py-2 md:py-3 bg-orange text-white rounded-full font-bold shadow-lg shadow-orange/20 hover:scale-105 transition-transform text-sm md:text-base"
+                                                    >
                                                         Register Now
                                                     </button>
                                                     {detail.problemStatements && (

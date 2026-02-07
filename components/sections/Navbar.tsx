@@ -114,7 +114,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstructionsClick }) => {
                         <span className="relative z-10">Guidelines</span>
                     </motion.button>
 
-                    <Button variant="cta" className="px-6 py-2.5 text-[10px] uppercase font-bold tracking-[0.2em] shadow-orange/20 hover:scale-105 active:scale-95 transition-transform">
+                    <Button
+                        variant="cta"
+                        className="px-6 py-2.5 text-[10px] uppercase font-bold tracking-[0.2em] shadow-orange/20 hover:scale-105 active:scale-95 transition-transform"
+                        onClick={() => window.open(content.navbar.ctaLink, '_blank')}
+                    >
                         {navbar.cta}
                     </Button>
                 </div>
