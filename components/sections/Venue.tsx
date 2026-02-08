@@ -36,10 +36,18 @@ export const Venue: React.FC = () => {
                                 <div className="flex items-center gap-2 text-orange font-bold text-[10px] tracking-widest uppercase">
                                     <MdLocationOn size={16} /> Campus Location
                                 </div>
-                                <h3 className="text-2xl font-bold tracking-tight text-white">Kongu Engineering College, Erode</h3>
+                                <h3 className="text-2xl font-bold tracking-tight text-white">Kongu Engineering College</h3>
                                 <p className="text-white/60 text-sm font-medium leading-relaxed">
-                                    156 ,5theru, Nadar Colony, Rs Road, near Kongu College Road, Erode, Vidya Nagar East, Tamil Nadu 638060
+                                    Perundurai, Erode - 638 060, Tamil Nadu, India.
                                 </p>
+                                <a
+                                    href="https://maps.app.goo.gl/AVtKkLFUMnwfXZVPA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-orange text-xs font-bold uppercase tracking-widest hover:text-white transition-colors mt-2"
+                                >
+                                    <MdLocationOn size={14} /> View on Map
+                                </a>
                             </div>
 
                             <div className="space-y-4 pt-10 border-t border-white/5">

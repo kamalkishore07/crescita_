@@ -195,9 +195,11 @@ export const InstructionsPopup: React.FC<InstructionsPopupProps> = ({
                                 <FiAlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                                 <div className="space-y-2">
                                     <p className="text-sm font-bold text-red-400 uppercase tracking-wide">Important Note</p>
-                                    <p className="text-[13px] text-white/70 leading-relaxed">
-                                        Any person violating the rules will be disqualified. The decision of the judges will be final. Refunds will not be provided under any circumstances.
-                                    </p>
+                                    <ul className="list-disc ml-4 space-y-1 text-[13px] text-white/70 leading-relaxed">
+                                        <li>Any person violating the rules will be disqualified.</li>
+                                        <li>The decision of the judges will be final.</li>
+                                        <li>Refunds will not be provided under any circumstances.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

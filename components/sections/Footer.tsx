@@ -27,19 +27,45 @@ export const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact - Removed as per request */}
+                    {/* Column 3 & 4 Merged: Developers & Connect */}
+                    <div className="space-y-6 md:col-span-2">
+                        <div className="flex flex-col md:flex-row gap-12 items-start">
+                            {/* Developers */}
+                            <div className="space-y-6">
+                                <h4 className="font-bold uppercase tracking-[0.2em] text-[10px] text-orange">Designed & Developed By</h4>
+                                <div className="flex gap-8">
+                                    {content.developers.map((dev: any, idx: number) => (
+                                        <a
+                                            key={idx}
+                                            href={dev.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group flex flex-col items-center gap-4 text-center cursor-pointer"
+                                        >
+                                            <div className="w-32 h-32 rounded-3xl overflow-hidden border border-white/10 group-hover:border-orange transition-colors shrink-0 shadow-lg shadow-black/20">
+                                                <img src={dev.image} alt={dev.name} className="w-full h-full object-cover" />
+                                            </div>
+                                            <span className="text-white/60 text-xs font-bold uppercase tracking-wider group-hover:text-orange transition-colors max-w-[120px] leading-tight">
+                                                {dev.name}
+                                            </span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
 
-                    {/* Column 4: Socials */}
-                    <div className="space-y-6">
-                        <h4 className="font-bold uppercase tracking-[0.2em] text-[10px] text-orange">Connect</h4>
-                        <div className="flex gap-4">
-                            {[
-                                { Icon: FaInstagram, href: content.socials.instagram }
-                            ].map((social, i) => (
-                                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:!bg-[#E3B23C] hover:text-black hover:border-orange transition-all duration-300 text-white/60">
-                                    <social.Icon />
-                                </a>
-                            ))}
+                            {/* Socials */}
+                            <div className="space-y-6">
+                                <h4 className="font-bold uppercase tracking-[0.2em] text-[10px] text-orange">Connect</h4>
+                                <div className="flex h-32 items-center">
+                                    {[
+                                        { Icon: FaInstagram, href: content.socials.instagram }
+                                    ].map((social, i) => (
+                                        <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-2xl border border-white/10 flex items-center justify-center hover:!bg-[#E3B23C] hover:text-black hover:border-orange transition-all duration-300 text-white/60 group">
+                                            <social.Icon className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +73,6 @@ export const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-12">
                     <div className="flex flex-col md:items-start items-center gap-2">
                         <span>&copy; 2026 Cresciton</span>
-                        <span className="text-[9px] opacity-80 normal-case tracking-widest">Developed & Maintained by Yuga Bharathi J, Varun Kumar N & Kamal Kishore V</span>
                     </div>
                     <div className="flex gap-1 items-center">
                         <span>Made with</span>

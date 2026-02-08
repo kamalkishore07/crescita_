@@ -232,7 +232,7 @@
         "title": "Event Coordinators",
         "members": [
             {
-                "name": "Prasanndh Raju M R",
+                "name": "Prasanndh Raaju M R",
                 "role": "Secretary (CSEA)",
                 "phone": "8946050246",
                 "image": "/prasanndh.jpeg"
@@ -250,68 +250,73 @@
                 "image": "/kamal.jpeg"
             },
             {
-                "name": "Dharaneesh SS",
-                "role": "Joint Secretary (CCC)",
-                "phone": "+91 78457 59168",
-                "image": "/dharaneesh.jpeg"
-            },
-            {
                 "name": "Shree Varshana R",
                 "role": "Joint Secretary (CSEA)",
-                "phone": "+91 877 895 0902",
+                "phone": "877 895 0902",
                 "image": "/shree varshana.jpeg"
             },
             {
-                "name": "Shubha Shree",
+                "name": "Shubha Shree S V",
                 "role": "Joint Treasurer (CCC)",
-                "phone": "+91 861 099 2902",
+                "phone": "861 099 2902",
                 "image": "/shuba.jpeg"
             },
             {
                 "name": "Arvind R",
                 "role": "Joint Treasurer (CSEA)",
-                "phone": "+91 81225 77433",
+                "phone": "81225 77433",
                 "image": "/arvind.jpeg"
             },
             {
-                "name": "Shashwant",
+                "name": "Dharaneesh SS",
+                "role": "Joint Secretary (CCC)",
+                "phone": "78457 59168",
+                "image": "/dharaneesh.jpeg"
+            },
+            {
+                "name": "Shaswanth R",
                 "role": "Joint Secretary (CSEA)",
-                "phone": "+91 863 742 2716",
+                "phone": "863 742 2716",
                 "image": "/shaswanth.jpeg"
             }
         ]
     },
     "schedule": {
-        "title": "Timeline of Innovation",
+        "title": "Hackathon Timeline",
         "days": [
             {
                 "day": "Day 01",
                 "date": "March 06, 2026",
                 "events": [
                     {
-                        "time": "09:00 AM",
+                        "time": "08:30 AM",
                         "event": "Check-in & Registration",
                         "type": "Logistics"
                     },
                     {
-                        "time": "11:00 AM",
-                        "event": "Opening Ceremony",
+                        "time": "09:00 AM",
+                        "event": "Inaugural & Hackathon Begins",
                         "type": "Ceremony"
                     },
                     {
-                        "time": "12:00 PM",
-                        "event": "Hacking Begins",
-                        "type": "Hacking"
+                        "time": "11:00 AM",
+                        "event": "1st Round Mentoring",
+                        "type": "Mentoring"
                     },
                     {
-                        "time": "01:30 PM",
-                        "event": "Lunch Break",
-                        "type": "Food"
+                        "time": "02:00 PM",
+                        "event": "1st Evaluation",
+                        "type": "Evaluation"
+                    },
+                    {
+                        "time": "05:00 PM",
+                        "event": "2nd Round Mentoring",
+                        "type": "Mentoring"
                     },
                     {
                         "time": "08:00 PM",
-                        "event": "Dinner & Networking",
-                        "type": "Food"
+                        "event": "2nd Evaluation",
+                        "type": "Evaluation"
                     }
                 ]
             },
@@ -320,29 +325,19 @@
                 "date": "March 07, 2026",
                 "events": [
                     {
-                        "time": "08:00 AM",
-                        "event": "Breakfast",
-                        "type": "Food"
+                        "time": "07:00 AM",
+                        "event": "3rd Mentoring",
+                        "type": "Mentoring"
                     },
                     {
-                        "time": "11:00 AM",
-                        "event": "Tech Workshop: Gemini AI",
-                        "type": "Workshop"
+                        "time": "12:00 PM",
+                        "event": "Final Evaluation",
+                        "type": "Evaluation"
                     },
                     {
-                        "time": "01:00 PM",
-                        "event": "Lunch",
-                        "type": "Food"
-                    },
-                    {
-                        "time": "04:00 PM",
-                        "event": "Mentorship Rounds",
-                        "type": "Hacking"
-                    },
-                    {
-                        "time": "09:00 PM",
-                        "event": "Midnight Fun Event",
-                        "type": "Social"
+                        "time": "03:30 PM",
+                        "event": "Valedictory",
+                        "type": "Ceremony"
                     }
                 ]
             }
@@ -350,5 +345,22 @@
     },
     "socials": {
         "instagram": "https://www.instagram.com/csea_kec/"
-    }
+    },
+    "developers": [
+        {
+            "name": "Kamal Kishore V",
+            "image": "/kamal.jpeg",
+            "linkedin": "https://www.linkedin.com/in/kamalkishorev/"
+        },
+        {
+            "name": "Varun Kumar D",
+            "image": "/varun.jpeg",
+            "linkedin": "https://www.linkedin.com/in/varunkumarn636/"
+        },
+        {
+            "name": "Yuga Bharathi Jaisankar",
+            "image": "/yuga.jpeg",
+            "linkedin": "https://www.linkedin.com/in/yugabharathi21/"
+        }
+    ]
 }

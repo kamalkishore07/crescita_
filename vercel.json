@@ -1,0 +1,7 @@
+{
+    "name": "crescita2k26",
+    "framework": "nextjs",
+    "buildCommand": "next build",
+    "devCommand": "next dev",
+    "installCommand": "npm install"
+}
