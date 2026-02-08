@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstructionsClick }) => {
         const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
         // Targeted sections based on hrefs
-        const sections = ['flow', 'prizes', 'sponsors', 'organisers', 'venue'];
+        const sections = ['events', 'flow', 'prizes', 'sponsors', 'organisers', 'venue'];
         sections.forEach((id) => {
             const el = document.getElementById(id);
             if (el) observer.observe(el);

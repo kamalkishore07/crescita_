@@ -60,7 +60,7 @@ export const TechEvents: React.FC = () => {
     }, [selectedEvent, showPSModal]);
 
     return (
-        <section className="py-24 px-4 sm:px-8 md:px-16 bg-transparent">
+        <section id="events" className="py-24 px-4 sm:px-8 md:px-16 bg-transparent">
             <div className="max-w-6xl mx-auto space-y-16">
                 {/* Section Header */}
                 <div className="text-center space-y-4 reveal">

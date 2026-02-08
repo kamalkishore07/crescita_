@@ -3,12 +3,8 @@
         "logo": "Cresciton",
         "links": [
             {
-                "label": "Flow",
-                "href": "#flow"
-            },
-            {
-                "label": "Sponsors",
-                "href": "#sponsors"
+                "label": "Events",
+                "href": "#events"
             },
             {
                 "label": "Contact",
@@ -17,6 +13,10 @@
             {
                 "label": "Venue",
                 "href": "#venue"
+            },
+            {
+                "label": "Sponsors",
+                "href": "#sponsors"
             }
         ],
         "cta": "Register Now",
@@ -348,17 +348,17 @@
     },
     "developers": [
         {
-            "name": "Kamal Kishore V",
+            "name": "Kamal Kishore",
             "image": "/kamal.jpeg",
             "linkedin": "https://www.linkedin.com/in/kamalkishorev/"
         },
         {
-            "name": "Varun Kumar D",
+            "name": "Varun Kumar",
             "image": "/varun.jpeg",
             "linkedin": "https://www.linkedin.com/in/varunkumarn636/"
         },
         {
-            "name": "Yuga Bharathi Jaisankar",
+            "name": "Yuga Bharathi",
             "image": "/yuga.jpeg",
             "linkedin": "https://www.linkedin.com/in/yugabharathi21/"
         }
