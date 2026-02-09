@@ -299,6 +299,11 @@
                         "type": "Ceremony"
                     },
                     {
+                        "time": "09:00 AM",
+                        "event": "Workshop Begins",
+                        "type": "Workshop"
+                    },
+                    {
                         "time": "11:00 AM",
                         "event": "1st Round Mentoring",
                         "type": "Mentoring"
@@ -307,6 +312,11 @@
                         "time": "02:00 PM",
                         "event": "1st Evaluation",
                         "type": "Evaluation"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "event": "Workshop Winds Up",
+                        "type": "Workshop"
                     },
                     {
                         "time": "05:00 PM",
@@ -328,6 +338,16 @@
                         "time": "07:00 AM",
                         "event": "3rd Mentoring",
                         "type": "Mentoring"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "event": "Workshop Begins",
+                        "type": "Workshop"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "event": "Tech Events Begins",
+                        "type": "Competition"
                     },
                     {
                         "time": "12:00 PM",

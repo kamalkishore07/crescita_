@@ -15,6 +15,25 @@ export const Venue: React.FC = () => {
         }
     };
 
+    // Group events by time
+    const groupEventsByTime = (events: any[]) => {
+        const grouped: { [key: string]: any[] } = {};
+        events.forEach(event => {
+            if (!grouped[event.time]) {
+                grouped[event.time] = [];
+            }
+            grouped[event.time].push(event);
+        });
+        return grouped;
+    };
+
+    const groupedEvents = groupEventsByTime(schedule.days[activeDay].events);
+    const timeKeys = Object.keys(groupedEvents); // Maintain order as per original array if possible, but object keys might reorder. 
+    // Better to use Map or just iterate unique times from original array to preserve order
+
+    // Preserving order based on appearance in the original array
+    const uniqueTimes = Array.from(new Set(schedule.days[activeDay].events.map(e => e.time)));
+
     return (
         <section id="venue" className="py-32 px-4 sm:px-8 md:px-16 bg-transparent">
             <div className="max-w-7xl mx-auto">
@@ -91,44 +110,51 @@ export const Venue: React.FC = () => {
                             {/* Visual Timeline Line */}
                             <div className="absolute left-[39px] top-10 bottom-10 w-[2px] bg-orange/30 hidden md:block"></div>
 
-                            {schedule.days[activeDay].events.map((item, i) => (
-                                <div
-                                    key={i}
-                                    className="group relative bg-[#111] border border-white/5 rounded-3xl p-6 md:px-10 flex flex-col md:flex-row md:items-center gap-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20 hover:scale-[1.02] overflow-hidden"
-                                >
-                                    <div className="gloss-sheen"></div>
-                                    {/* Time Block */}
-                                    <div className="md:w-32 flex items-center gap-4 relative z-10">
-                                        <div className="w-4 h-4 rounded-full border-4 border-[#0A0A0A] bg-white/10 group-hover:bg-orange group-hover:scale-125 transition-all duration-500 hidden md:block absolute -left-[30px]"></div>
-                                        <span className="text-base font-bold text-white tracking-tight group-hover:text-orange transition-colors">{item.time}</span>
-                                    </div>
-
-                                    {/* Content Block */}
-                                    <div className="flex-1 flex items-center gap-6">
-                                        <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-white/40 group-hover:bg-orange/10 group-hover:text-orange transition-all duration-500">
-                                            {getIcon(item.type)}
+                            {uniqueTimes.map((time, i) => {
+                                const eventsAtTime = groupedEvents[time];
+                                return (
+                                    <div
+                                        key={i}
+                                        className="group relative bg-[#111] border border-white/5 rounded-3xl p-6 md:px-10 flex flex-col md:flex-row md:items-start gap-8 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20 hover:scale-[1.02] overflow-hidden"
+                                    >
+                                        <div className="gloss-sheen"></div>
+                                        {/* Time Block */}
+                                        <div className="md:w-32 flex items-center gap-4 relative z-10 mt-2">
+                                            <div className="w-4 h-4 rounded-full border-4 border-[#0A0A0A] bg-white/10 group-hover:bg-orange group-hover:scale-125 transition-all duration-500 hidden md:block absolute -left-[30px]"></div>
+                                            <span className="text-base font-bold text-white tracking-tight group-hover:text-orange transition-colors">{time}</span>
                                         </div>
 
-                                        <div className="space-y-1">
-                                            <h4 className="text-xl font-bold text-white tracking-tight group-hover:text-orange transition-colors">
-                                                {item.event}
-                                            </h4>
-                                            <div className="flex items-center gap-3">
-                                                <span className="bg-white/5 text-white/40 text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full group-hover:bg-orange/5 group-hover:text-orange/60 transition-all">
-                                                    {item.type}
-                                                </span>
+                                        {/* Content Block Container */}
+                                        <div className="flex-1 flex flex-col w-full">
+                                            {eventsAtTime.map((item: any, idx: number) => (
+                                                <div key={idx} className={`${idx > 0 ? 'pt-6 mt-6 border-t border-white/5' : ''} flex-1 flex items-center gap-6 w-full`}>
+                                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-white/40 group-hover:bg-orange/10 group-hover:text-orange transition-all duration-500 shrink-0">
+                                                        {getIcon(item.type)}
+                                                    </div>
+
+                                                    <div className="space-y-1">
+                                                        <h4 className="text-xl font-bold text-white tracking-tight group-hover:text-orange transition-colors">
+                                                            {item.event}
+                                                        </h4>
+                                                        <div className="flex items-center gap-3">
+                                                            <span className="bg-white/5 text-white/40 text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full group-hover:bg-orange/5 group-hover:text-orange/60 transition-all">
+                                                                {item.type}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Arrow Indicator */}
+                                        <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
+                                            <div className="w-8 h-8 rounded-full bg-orange/10 flex items-center justify-center text-orange">
+                                                <MdStars size={16} />
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Arrow Indicator */}
-                                    <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="w-8 h-8 rounded-full bg-orange/10 flex items-center justify-center text-orange">
-                                            <MdStars size={16} />
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
 
@@ -137,3 +163,4 @@ export const Venue: React.FC = () => {
         </section>
     );
 };
+
